@@ -1,50 +1,250 @@
 {
     "eventVersion": "1.08",
     "userIdentity": {
-        "type": "IAMUser",
-        "principalId": "AIDAV6O4OVSLGITFTPL7R",
-        "arn": "arn:aws:iam::409021099158:user/git-hub-iam-access",
-        "accountId": "409021099158",
-        "accessKeyId": "AKIAV6O4OVSLBFFRAGGI",
-        "userName": "git-hub-iam-access"
-    },
-    "eventTime": "2023-09-19T17:00:40Z",
-    "eventSource": "acm.amazonaws.com",
-    "eventName": "RequestCertificate",
-    "awsRegion": "us-east-1",
-    "random_ip": "13.88.99.79",
-    "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.0.1 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; linux; amd64)",
-    "requestParameters": {
-        "domainName": "askamsa.ai",
-        "validationMethod": "DNS",
-        "subjectAlternativeNames": [
-            "*.aria.askamsa.ai"
-        ],
-        "idempotencyToken": "tf20230919170040083800000002",
-        "tags": [
-            {
-                "key": "env",
-                "value": "dev"
+        "type": "AssumedRole",
+        "principalId": "AROAQNOKEUJ3RUYUFGIDK:AutoScaling",
+        "arn": "arn:aws:sts::028878086775:assumed-role/AWSServiceRoleForAutoScaling/AutoScaling",
+        "accountId": "028878086775",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROAQNOKEUJ3RUYUFGIDK",
+                "arn": "arn:aws:iam::028878086775:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling",
+                "accountId": "028878086775",
+                "userName": "AWSServiceRoleForAutoScaling"
             },
-            {
-                "key": "Name",
-                "value": "askamsa.ai"
+            "webIdFederationData": {},
+            "attributes": {
+                "creationDate": "2023-10-24T18:45:52Z",
+                "mfaAuthenticated": "false"
             }
-        ]
+        },
+        "invokedBy": "autoscaling.amazonaws.com"
+    },
+    "eventTime": "2023-10-24T18:45:54Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "RunInstances",
+    "awsRegion": "us-west-1",
+    "sourceIPAddress": "autoscaling.amazonaws.com",
+    "userAgent": "autoscaling.amazonaws.com",
+    "requestParameters": {
+        "instancesSet": {
+            "items": [
+                {
+                    "minCount": 1,
+                    "maxCount": 1
+                }
+            ]
+        },
+        "blockDeviceMapping": {},
+        "availabilityZone": "us-west-1c",
+        "monitoring": {
+            "enabled": false
+        },
+        "disableApiTermination": false,
+        "disableApiStop": false,
+        "clientToken": "97f62d8c-07b0-31e0-27b7-6787c5165ff1",
+        "networkInterfaceSet": {
+            "items": [
+                {
+                    "deviceIndex": 0,
+                    "subnetId": "subnet-02ad7658",
+                    "networkCardIndex": 0
+                }
+            ]
+        },
+        "tagSpecificationSet": {
+            "items": [
+                {
+                    "resourceType": "instance",
+                    "tags": [
+                        {
+                            "key": "aws:autoscaling:groupName",
+                            "value": "citris-dev-asg"
+                        },
+                        {
+                            "key": "Environment",
+                            "value": "dev-api"
+                        },
+                        {
+                            "key": "application",
+                            "value": "web-api"
+                        }
+                    ]
+                }
+            ]
+        },
+        "launchTemplate": {
+            "launchTemplateId": "lt-05b5fbcee373d73e7",
+            "version": "2"
+        }
     },
     "responseElements": {
-        "certificateArn": "arn:aws:acm:us-east-1:409021099158:certificate/0e2a6950-e2a6-4964-bcdb-712e945a6164"
+        "requestId": "52e8118a-07cb-4a62-b5ea-3ea69227ce7c",
+        "reservationId": "r-0743f49e504f45213",
+        "ownerId": "028878086775",
+        "groupSet": {},
+        "instancesSet": {
+            "items": [
+                {
+                    "instanceId": "i-08cd4f49d14110b9a",
+                    "imageId": "ami-0f8e81a3da6e2510a",
+                    "currentInstanceBootMode": "legacy-bios",
+                    "instanceState": {
+                        "code": 0,
+                        "name": "pending"
+                    },
+                    "privateDnsName": "ip-172-31-7-99.us-west-1.compute.internal",
+                    "keyName": "Citris-ec2-KeyPair",
+                    "amiLaunchIndex": 0,
+                    "productCodes": {},
+                    "instanceType": "c4.large",
+                    "launchTime": 1698173153000,
+                    "placement": {
+                        "availabilityZone": "us-west-1c",
+                        "tenancy": "default"
+                    },
+                    "monitoring": {
+                        "state": "pending"
+                    },
+                    "subnetId": "subnet-02ad7658",
+                    "vpcId": "vpc-2fa47849",
+                    "privateIpAddress": "172.31.7.99",
+                    "stateReason": {
+                        "code": "pending",
+                        "message": "pending"
+                    },
+                    "architecture": "x86_64",
+                    "rootDeviceType": "ebs",
+                    "rootDeviceName": "/dev/sda1",
+                    "blockDeviceMapping": {},
+                    "virtualizationType": "hvm",
+                    "hypervisor": "xen",
+                    "tagSet": {
+                        "items": [
+                            {
+                                "key": "aws:ec2launchtemplate:id",
+                                "value": "lt-05b5fbcee373d73e7"
+                            },
+                            {
+                                "key": "aws:ec2launchtemplate:version",
+                                "value": "2"
+                            },
+                            {
+                                "key": "aws:autoscaling:groupName",
+                                "value": "citris-dev-asg"
+                            },
+                            {
+                                "key": "Name",
+                                "value": "citris-ec2-dev-api"
+                            },
+                            {
+                                "key": "application",
+                                "value": "web-api"
+                            },
+                            {
+                                "key": "Environment",
+                                "value": "dev-api"
+                            }
+                        ]
+                    },
+                    "clientToken": "97f62d8c-07b0-31e0-27b7-6787c5165ff1",
+                    "groupSet": {
+                        "items": [
+                            {
+                                "groupId": "sg-040f0c59b92d0a4f4",
+                                "groupName": "citris_web_api_dev_sg"
+                            }
+                        ]
+                    },
+                    "sourceDestCheck": true,
+                    "networkInterfaceSet": {
+                        "items": [
+                            {
+                                "networkInterfaceId": "eni-0f13a1fa86d5f8122",
+                                "subnetId": "subnet-02ad7658",
+                                "vpcId": "vpc-2fa47849",
+                                "ownerId": "028878086775",
+                                "status": "in-use",
+                                "macAddress": "06:2d:2f:9b:7e:65",
+                                "privateIpAddress": "172.31.7.99",
+                                "privateDnsName": "ip-172-31-7-99.us-west-1.compute.internal",
+                                "sourceDestCheck": true,
+                                "interfaceType": "interface",
+                                "groupSet": {
+                                    "items": [
+                                        {
+                                            "groupId": "sg-040f0c59b92d0a4f4",
+                                            "groupName": "citris_web_api_dev_sg"
+                                        }
+                                    ]
+                                },
+                                "attachment": {
+                                    "attachmentId": "eni-attach-0bcc9f60e6ae56f83",
+                                    "deviceIndex": 0,
+                                    "networkCardIndex": 0,
+                                    "status": "attaching",
+                                    "attachTime": 1698173153000,
+                                    "deleteOnTermination": true
+                                },
+                                "privateIpAddressesSet": {
+                                    "item": [
+                                        {
+                                            "privateIpAddress": "172.31.7.99",
+                                            "privateDnsName": "ip-172-31-7-99.us-west-1.compute.internal",
+                                            "primary": true
+                                        }
+                                    ]
+                                },
+                                "ipv6AddressesSet": {},
+                                "tagSet": {}
+                            }
+                        ]
+                    },
+                    "iamInstanceProfile": {
+                        "arn": "arn:aws:iam::028878086775:instance-profile/ec2-codedeploy-service-role-dev",
+                        "id": "AIPAQNOKEUJ327JLNWSQY"
+                    },
+                    "ebsOptimized": false,
+                    "enaSupport": true,
+                    "cpuOptions": {
+                        "coreCount": 1,
+                        "threadsPerCore": 2
+                    },
+                    "capacityReservationSpecification": {
+                        "capacityReservationPreference": "open"
+                    },
+                    "enclaveOptions": {
+                        "enabled": false
+                    },
+                    "metadataOptions": {
+                        "state": "pending",
+                        "httpTokens": "required",
+                        "httpPutResponseHopLimit": 1,
+                        "httpEndpoint": "enabled",
+                        "httpProtocolIpv4": "enabled",
+                        "httpProtocolIpv6": "disabled",
+                        "instanceMetadataTags": "enabled"
+                    },
+                    "maintenanceOptions": {
+                        "autoRecovery": "default"
+                    },
+                    "privateDnsNameOptions": {
+                        "hostnameType": "ip-name",
+                        "enableResourceNameDnsARecord": false,
+                        "enableResourceNameDnsAAAARecord": false
+                    }
+                }
+            ]
+        },
+        "requesterId": "802156063200"
     },
-    "requestID": "44661ca7-5eb9-48e9-9be1-ee93cc40484f",
-    "eventID": "f04c5789-0143-4199-b19f-87ad0dd106ce",
+    "requestID": "52e8118a-07cb-4a62-b5ea-3ea69227ce7c",
+    "eventID": "7d42e91a-8248-41d0-8d3a-400ccea14ef4",
     "readOnly": false,
     "eventType": "AwsApiCall",
     "managementEvent": true,
-    "recipientAccountId": "409021099158",
-    "eventCategory": "Management",
-    "tlsDetails": {
-        "tlsVersion": "TLSv1.3",
-        "cipherSuite": "TLS_AES_128_GCM_SHA256",
-        "clientProvidedHostHeader": "acm.us-east-1.amazonaws.com"
-    }
+    "recipientAccountId": "028878086775",
+    "eventCategory": "Management"
 }
+
