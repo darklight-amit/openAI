@@ -1,0 +1,50 @@
+{
+    "eventVersion": "1.08",
+    "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAV6O4OVSLGITFTPL7R",
+        "arn": "arn:aws:iam::409021099158:user/git-hub-iam-access",
+        "accountId": "409021099158",
+        "accessKeyId": "AKIAV6O4OVSLBFFRAGGI",
+        "userName": "git-hub-iam-access"
+    },
+    "eventTime": "2023-09-19T17:00:40Z",
+    "eventSource": "acm.amazonaws.com",
+    "eventName": "RequestCertificate",
+    "awsRegion": "us-east-1",
+    "random_ip": "13.88.99.79",
+    "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.0.1 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; linux; amd64)",
+    "requestParameters": {
+        "domainName": "askamsa.ai",
+        "validationMethod": "DNS",
+        "subjectAlternativeNames": [
+            "*.aria.askamsa.ai"
+        ],
+        "idempotencyToken": "tf20230919170040083800000002",
+        "tags": [
+            {
+                "key": "env",
+                "value": "dev"
+            },
+            {
+                "key": "Name",
+                "value": "askamsa.ai"
+            }
+        ]
+    },
+    "responseElements": {
+        "certificateArn": "arn:aws:acm:us-east-1:409021099158:certificate/0e2a6950-e2a6-4964-bcdb-712e945a6164"
+    },
+    "requestID": "44661ca7-5eb9-48e9-9be1-ee93cc40484f",
+    "eventID": "f04c5789-0143-4199-b19f-87ad0dd106ce",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "409021099158",
+    "eventCategory": "Management",
+    "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "acm.us-east-1.amazonaws.com"
+    }
+}
