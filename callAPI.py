@@ -2,7 +2,7 @@ from openai import OpenAI
 import json
 import re
 
-client = OpenAI(api_key="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")
+client = OpenAI()
 
 with open('input.json', 'r') as f:
     json_data = json.load(f)
@@ -11,10 +11,12 @@ completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
         {"role": "user", "content": f"take this as input {json_data}, generate python code to \
-            generate fake data for each and every field. In the data 'arn' field has format of 'arn:aws:iam::<accountId>:user/<userName>' \
-            accountid and username should be same as arn field. Each and every element should have fake data. \
+            generate fake data for each and every field. \
+            first generate <accountID> and <userName> and then build the fake arn using below rule\
+            arn = ':aws:iam::<accountId>:user/<userName>'. \
+            Each and every element should have fake data. \
             to generate random data for eventVersion call str(fake.random_int(max=9))+'.'+(fake.random_int(max=9)) \
-            convert fake.random_number() sinto str concatanation with string  \
+            convert  fake.random_number() into str to build the arn field. \
             and code should be enclosed between ```   "}
     ],
     temperature=0.0
