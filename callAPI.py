@@ -2,7 +2,7 @@ from openai import OpenAI
 import json
 import re
 
-client = OpenAI()
+client = OpenAI(api_key="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")
 
 with open('input.json', 'r') as f:
     json_data = json.load(f)
