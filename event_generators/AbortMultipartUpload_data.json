@@ -1,0 +1,54 @@
+[
+    {
+        "eventVersion": "0.8",
+        "eventTime": "2020-08-08T22:33:32.083211",
+        "eventSource": "s3.amazonaws.com",
+        "eventName": "AbortMultipartUpload",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "218.104.43.3",
+        "userAgent": "Opera/8.53.(Windows 95; km-KH) Presto/2.9.163 Version/11.00",
+        "requestParameters": {
+            "bucketName": "development",
+            "key": "/reveal/grow/maybe/really.tiff",
+            "uploadId": "f78a2e1a-0991-4843-931d-2a8975dd54e2"
+        },
+        "responseElements": {},
+        "s3": {
+            "s3SchemaVersion": "1.0",
+            "configurationId": "3f43dae2-8b7c-4570-8f02-2c2f251d4374",
+            "bucket": {
+                "name": "Congress",
+                "ownerIdentity": {
+                    "principalId": "a66bb5d4-f8c3-4d17-950b-1ecb5fd6cf56"
+                },
+                "arn": "arn:aws:s3:::building"
+            },
+            "object": {
+                "key": "/whole/push/want/until/brother/rock.csv",
+                "size": 675406,
+                "eTag": "5fef2232-5172-4d9f-a829-6ef8dd2e3325",
+                "versionId": "e459b258-d11c-4ef6-8d4f-9d89fd6f1e49",
+                "sequencer": "472268e2-f58d-4b49-a3b7-1735a59adb3a"
+            }
+        },
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "047c0fc5-dc07-436a-b4c2-9f0f5691a95f",
+            "arn": ":aws:iam::976454830949:user/smiller",
+            "accountId": 976454830949,
+            "accessKeyId": "9d5c3afb-7962-4548-80b4-f0d72d9244ac",
+            "userName": "smiller"
+        },
+        "eventID": "bc0fd2dc-80d8-4a3c-b4d1-0479ca94a768",
+        "eventType": "AwsApiCall",
+        "recipientAccountId": 825639410478,
+        "eventCategory": "Management",
+        "apiVersion": "2006-03-01",
+        "readOnly": true,
+        "managementEvent": true,
+        "eventData": {
+            "apiVersion": "2006-03-01",
+            "requestId": "48c1c469-6d38-4248-9537-26c9dd7122e7"
+        }
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "eventVersion": "3.7",
+        "eventTime": "2022-04-13T13:01:01.652171",
+        "eventSource": "cloudtrail.amazonaws.com",
+        "eventName": "AbortDocumentVersionUpload",
+        "awsRegion": "eu-west-1",
+        "sourceIPAddress": "96.49.40.165",
+        "userAgent": "Mozilla/5.0 (Android 3.1; Mobile; rv:10.0) Gecko/10.0 Firefox/10.0",
+        "requestParameters": {
+            "documentVersionId": "6f1824d7-98e8-4b02-9502-478d9fc45e81",
+            "documentId": "1089e319-97ad-4127-aba1-8f70ee2ba636",
+            "versionId": "cfa2ed68-d7df-4ef4-821e-ff654b7369c3"
+        },
+        "responseElements": {},
+        "requestID": "84b70bff-0ce9-4a83-8cbb-f3833bbb95c7",
+        "eventID": "59bfac91-680d-48a6-b550-76ae586de6f8",
+        "readOnly": false,
+        "resources": [
+            {
+                "ARN": ":aws:iam::137888993182:user/stevensbrian"
+            }
+        ],
+        "eventType": "AwsApiCall",
+        "managementEvent": false,
+        "recipientAccountId": 697587544054,
+        "eventCategory": "Management"
+    }
+]

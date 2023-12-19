@@ -1,0 +1,44 @@
+[
+    {
+        "eventVersion": "8.9",
+        "eventTime": "2021-04-28T06:53:49.871891",
+        "eventSource": "elasticbeanstalk.amazonaws.com",
+        "eventName": "AbortEnvironmentUpdate",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "140.201.159.164",
+        "userAgent": "Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 6.1; Trident/4.1)",
+        "requestParameters": {
+            "arn": ":aws:iam::568349686602:user/walkerallison"
+        },
+        "responseElements": {},
+        "requestID": "1473b3b7-aabb-481e-9397-05d40bdd35b7",
+        "eventID": "24d00b9a-331f-4e0b-9898-4502b12050ff",
+        "readOnly": false,
+        "resources": [
+            {
+                "arn": ":aws:iam::568349686602:user/walkerallison",
+                "accountId": 568349686602,
+                "type": "AWS::IAM::User"
+            }
+        ],
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": 959707468581,
+        "eventCategory": "Management",
+        "eventSourceARN": ":aws:iam::568349686602:user/walkerallison",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": 297117923200109534216,
+            "arn": ":aws:iam::568349686602:user/walkerallison",
+            "accountId": 568349686602,
+            "accessKeyId": 68475720103889234902,
+            "userName": "walkerallison",
+            "sessionContext": {
+                "attributes": {
+                    "mfaAuthenticated": "false",
+                    "creationDate": "2014-05-21T18:57:34.319959"
+                }
+            }
+        }
+    }
+]
