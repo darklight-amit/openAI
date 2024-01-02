@@ -2,7 +2,7 @@ from openai import OpenAI
 import json
 import re
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 
 def openai_code_generator(event_name):
 
@@ -23,6 +23,7 @@ def openai_code_generator(event_name):
     )
 
     generated_text = completion.choices[0].message.content
+    print(generated_text)
     start_string = "```python"
     end_string = "```"
 
@@ -30,7 +31,6 @@ def openai_code_generator(event_name):
     match = re.search(pattern, generated_text) 
     generated_code = match.group(1)
     generated_code = generated_code.replace('random_string', 'password')
-
     # Specify the file path where you want to save the generated code file_path = "generated_code.py"
 
     # Write the generated code to the file
@@ -44,8 +44,6 @@ if __name__ == "__main__":
     with open('cloud_trail_events_name.txt','r') as f:
         count = 1
         for even_name in f.readlines():
-            if count > 5:
-                break
             openai_code_generator(even_name.strip())
             count += 1
             
